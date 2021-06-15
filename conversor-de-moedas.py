@@ -1,3 +1,13 @@
+# Conversor de moedas
+# Crie um programa que solicite um um valor em real ao usuário e converta esse valor, para:
+
+# DOLAR,
+# EURO,
+# LIBRA ESTERLINA,
+# DÓLAR CANADENSE,
+# PESO ARGENTINO,
+# PESO CHILENO.
+
 valorDolar = 5.04
 valorEuro = 6.13
 valorLibra = 7.13
