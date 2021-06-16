@@ -1,6 +1,5 @@
-# Crie um jogo onde o computador vai “pensar” em um número entre 0 e 10. O jogador vai tentar
-# adivinhar qual número foi escolhido até acertar, mostrando no final quantos palpites foram
-# necessários para vencer.
+# DESAFIO:
+# 4 - Crie um jogo onde o computador vai “pensar” em um número entre 0 e 10. O jogador vai tentar adivinhar qual número foi escolhido até acertar, mostrando no final quantos palpites foram necessários para vencer.
 
 import random
 valor_aleatorio = random.randint(0,10)
