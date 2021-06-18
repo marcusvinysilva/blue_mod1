@@ -7,16 +7,11 @@ jogos = []
 quantidade_jogos = int(input('Quantos jogos você deseja? '))
 
 for i in range(quantidade_jogos):
-    count = 0 
     lista = [] 
-    while True:
+    while len(lista) < 6:
         num = random.randint(1,60)
         if num not in lista:
             lista.append(num)
-            count += 1
-            if count == 6:
-                break
     lista.sort()
     jogos.append(lista)
-    print(f'Jogo {i+1}: {jogos[i]}')
-
+    print(f'Jogo {i+1}: {lista}')
