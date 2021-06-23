@@ -9,6 +9,7 @@ quant_pessoas = 0
 altura_maior = 0
 altura_menor = 0
 lista_final = []
+
 while True:
     lista = []
     nome = input('Digite o seu nome: ').title().strip()
