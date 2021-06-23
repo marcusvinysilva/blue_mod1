@@ -3,16 +3,25 @@
 dic_media = {}
 
 while True:
+    lista = []
     nome = str(input('Digite o nome do aluno: ').title())
-    if nome == '0':
+    media = float(input(f'Digite a média de {nome}: ').replace(',','.'))
+    lista.append(media)
+    if media >= 7:
+        lista.append('Aprovado')
+    elif media >= 5 and media <= 6.9:
+        lista.append('Recuperação')
+    elif media < 5:
+        lista.append('Reprovado')
+    dic_media[nome] = lista
+    continuar = input('Deseja continuar? [S/N] ').upper().strip()[0]
+    while continuar not in 'SN':
+        continuar = input('Deseja continuar? [S/N] ').upper().strip()[0]
+    if continuar == 'N':
         break
-    media = float(input(f'Digite a média do(a) {nome}: ').replace(',','.'))
-    dic_media[nome] = media
-    if dic_media[nome] >= 7:
-        print('Aprovado')
-    elif dic_media[nome] >= 5 and dic_media[nome] <= 6.9:
-        print('Recuperação')
-    elif dic_media[nome] < 5:
-        print('Reprovado')
-
+print()
 print(dic_media)
+print()
+for i in dic_media:
+    print(f'Aluno(a): {i}\nMédia = {dic_media[i][0]}\nSituação: {dic_media[i][1]}')
+    print()

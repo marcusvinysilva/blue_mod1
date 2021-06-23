@@ -10,14 +10,15 @@ quant_pessoas = 0
 idade_pessoas = 0
 lista_mulheres = []
 lista_idades_acima_media = []
+
 while True:
     lista = []
-    nome = str(input('Digite o seu nome: ').upper().strip())
+    nome = str(input('Digite o seu nome: ').title().strip())
     quant_pessoas += 1
     sexo = str(input('Informe o seu sexo: [F/M] ').upper().strip()[0])
-    lista.append(sexo)
     while sexo not in 'MF':
         sexo = str(input('Informe o seu sexo: [F/M] ').upper().strip()[0])
+    lista.append(sexo)
     if sexo == 'F':
         lista_mulheres.append(nome)
     idade = int(input('Informe a sua idade: '))
@@ -29,6 +30,7 @@ while True:
         continuar = str(input('Deseja continuar? [S/N] ').upper().strip()[0])
     if continuar == 'N':
         break
+
 media_idades = int((idade_pessoas / quant_pessoas))
 for i in dic_infos:
     if dic_infos[i][1] > media_idades:
