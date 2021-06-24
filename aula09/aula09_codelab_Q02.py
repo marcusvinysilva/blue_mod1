@@ -15,6 +15,8 @@ while True:
     else:
         print('\nO valor já foi adicionado. Digite outro número!')
     continuar = input('\nDeseja adicionar outro número? [S/N]: ').upper()
+    while continuar not in 'SN':
+        continuar = input('\nDeseja adicionar outro número? [S/N]: ').upper()
     if continuar == 'N':
         break
 
