@@ -7,7 +7,7 @@ total = mais1000 = mais_barato = unidade = 0
 nome = ''
 while True:
     produto = input('Produto: ').strip()
-    preco = float(input('Preço do produto: R$ '))
+    preco = float(input('Preço do produto: R$ ').replace(',','.'))
     unidade += 1
     total += preco
     if preco > 1000:

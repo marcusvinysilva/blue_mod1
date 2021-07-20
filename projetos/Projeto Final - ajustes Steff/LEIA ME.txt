@@ -1,0 +1,6 @@
+IMPORTE O PYGAME PARA A SUA MÁQUINA
+
+No CMD:
+
+pip install pygame
+

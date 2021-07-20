@@ -2,8 +2,10 @@
 import random
 palavras = ["ABACATE", "ABACAXI", "ACEROLA", "GOIABA", "AMORA", "BANANA", "MORANGO", "CACAU", "CEREJA"]
 palavra_sorteada = random.choice(palavras)
-forca = ['_' for i in range(len(palavra_sorteada))]
-print(''.join(forca))
+forca = []
+for i in range(len(palavra_sorteada)):
+    forca.append('_')
+print(' '.join(forca))
 print(f'A palavra tem {len(palavra_sorteada)} letras.')
 
 tentativa = 6
@@ -18,7 +20,7 @@ while tentativa > 0 and forca.count('_') != 0:
         print(''.join(forca))
         print(f'A palavra tem {len(palavra_sorteada)} letras.')
     else:
-        tentativa = tentativa - 1
+        tentativa -= 1
         print(f'A palavra não tem essa letra. Você ainda tem {tentativa} tentativa(s).')
         print(''.join(forca))
         print(f'A palavra tem {len(palavra_sorteada)} letras.')
